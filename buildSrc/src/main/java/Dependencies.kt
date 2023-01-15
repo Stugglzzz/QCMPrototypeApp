@@ -1,6 +1,6 @@
 object Dependencies {
     //Kotlin
-    private const val kotlinVersion = "1.6.10"
+    private const val kotlinVersion = "1.7.20"
 
     // AndroidX
     private const val coreKtxVersion = "1.9.0"
@@ -11,12 +11,12 @@ object Dependencies {
 
     // Compose
     private const val activityComposeVersion = "1.6.1"
-    private const val composeCompilerVersion = "1.3.2"
+    const val composeCompilerVersion = "1.3.2"
     const val activityCompose = "androidx.activity:activity-compose:$activityComposeVersion"
-    const val compiler = "androidx.compose.compiler:compiler:$composeCompilerVersion"
+    const val composeCompiler = "androidx.compose.compiler:compiler:$composeCompilerVersion"
 
-    const val composeVersion = "1.3.3"
-    const val material = "androidx.compose.material:material:$composeVersion"
+    private const val composeVersion = "1.3.1"
+    const val composeMaterial = "androidx.compose.material:material:$composeVersion"
     const val ui = "androidx.compose.ui:ui:$composeVersion"
     const val uiToolingPreview = "androidx.compose.ui:ui-tooling-preview:$composeVersion"
     const val runtime = "androidx.compose.runtime:runtime:$composeVersion"
@@ -44,7 +44,7 @@ object Dependencies {
 
 
     // Google
-    private const val materialVersion = "1.7.0"
+    private const val materialVersion = "1.6.0"
     const val googleMaterial = "com.google.android.material:material:$materialVersion"
 
     // Coroutines
@@ -74,5 +74,37 @@ object Dependencies {
     private const val hiltAndroidGradlePluginVersion = "2.42"
     const val hiltAndroidGradlePlugin =
         "com.google.dagger:hilt-android-gradle-plugin:$hiltAndroidGradlePluginVersion"
+
+
+    // Testing
+    private const val junitVersion = "4.13.2"
+    const val junit4 = "junit:junit:$junitVersion"
+
+    private const val junitAndroidExtVersion = "1.1.3"
+    const val junitAndroidExt = "androidx.test.ext:junit:$junitAndroidExtVersion"
+
+    private const val coroutinesTestVersion = "1.5.1"
+    const val coroutinesTest =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+
+    private const val truthVersion = "1.1.3"
+    const val truth = "com.google.truth:truth:$truthVersion"
+
+    private const val mockkVersion = "1.10.0"
+    const val mockk = "io.mockk:mockk:$mockkVersion"
+    const val mockkAndroid = "io.mockk:mockk-android:$mockkVersion"
+
+    private const val turbineVersion = "0.7.0"
+    const val turbine = "app.cash.turbine:turbine:$turbineVersion"
+
+    private const val mockWebServerVersion = "4.9.3"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$mockWebServerVersion"
+
+    const val composeUiTest = "androidx.compose.ui:ui-test-junit4:$composeVersion"
+
+    const val hiltTesting = "com.google.dagger:hilt-android-testing:$daggerHiltVersion"
+
+    private const val testRunnerVersion = "1.4.0"
+    const val testRunner = "androidx.test:runner:$testRunnerVersion"
 
 }

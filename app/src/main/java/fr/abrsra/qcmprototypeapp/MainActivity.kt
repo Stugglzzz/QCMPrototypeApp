@@ -1,7 +1,6 @@
 package fr.abrsra.qcmprototypeapp
 
 import android.os.Bundle
-import android.view.Surface
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import fr.abrsra.qcmprototypeapp.ui.theme.QCMPrototypeAppTheme
+import fr.abrsra.qcmprototypeapp.presentation.ui.theme.QCMPrototypeAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

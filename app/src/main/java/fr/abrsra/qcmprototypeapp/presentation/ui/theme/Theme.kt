@@ -1,4 +1,4 @@
-package fr.abrsra.qcmprototypeapp.ui.theme
+package fr.abrsra.qcmprototypeapp.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

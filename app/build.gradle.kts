@@ -42,21 +42,25 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.composeVersion
+        kotlinCompilerExtensionVersion = Dependencies.composeCompilerVersion
     }
     packagingOptions {
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
 }
 
 dependencies {
-    implementation(Dependencies.compiler)
+    implementation(Dependencies.coreKtx)
+    implementation(Dependencies.appCompat)
+
+    implementation(Dependencies.composeCompiler)
     implementation(Dependencies.ui)
     implementation(Dependencies.uiToolingPreview)
     implementation(Dependencies.hiltNavigationCompose)
-    implementation(Dependencies.material)
+    implementation(Dependencies.composeMaterial)
     implementation(Dependencies.runtime)
     implementation(Dependencies.navigation)
     implementation(Dependencies.viewModelCompose)
@@ -80,4 +84,25 @@ dependencies {
 
     implementation(Dependencies.glide)
     kapt(Dependencies.glideCompiler)
+
+    testImplementation(Dependencies.junit4)
+    testImplementation(Dependencies.junitAndroidExt)
+    testImplementation(Dependencies.truth)
+    testImplementation(Dependencies.coroutinesTest)
+    testImplementation(Dependencies.turbine)
+    testImplementation(Dependencies.composeUiTest)
+    testImplementation(Dependencies.mockk)
+    testImplementation(Dependencies.mockWebServer)
+
+    androidTestImplementation(Dependencies.junit4)
+    androidTestImplementation(Dependencies.junitAndroidExt)
+    androidTestImplementation(Dependencies.truth)
+    androidTestImplementation(Dependencies.coroutinesTest)
+    androidTestImplementation(Dependencies.turbine)
+    androidTestImplementation(Dependencies.composeUiTest)
+    androidTestImplementation(Dependencies.mockkAndroid)
+    androidTestImplementation(Dependencies.mockWebServer)
+    androidTestImplementation(Dependencies.hiltTesting)
+    kaptAndroidTest(Dependencies.hiltCompiler)
+    androidTestImplementation(Dependencies.testRunner)
 }
