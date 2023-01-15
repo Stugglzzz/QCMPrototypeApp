@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "QCMPrototypeApp"
-include ':app'
+include("app")
