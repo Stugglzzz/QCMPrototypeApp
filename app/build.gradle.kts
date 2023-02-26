@@ -85,6 +85,10 @@ dependencies {
     implementation(Dependencies.glide)
     kapt(Dependencies.glideCompiler)
 
+    implementation(project(Modules.core))
+    implementation(project(Modules.onboardingDomain))
+    implementation(project(Modules.onboardingPresentation))
+
     testImplementation(Dependencies.junit4)
     testImplementation(Dependencies.junitAndroidExt)
     testImplementation(Dependencies.truth)
